@@ -21,22 +21,7 @@ A modern web application that helps users discover movies and get personalized r
 - React Router
 - Axios
 - OMDB API
-- CSS3 with modern features
 - Font Awesome icons
-
-## Screenshots
-
-### Home Page
-
-![Home Page](screenshot-url-here)
-
-### Movie Details
-
-![Movie Details](screenshot-url-here)
-
-### Search Results
-
-![Search Results](screenshot-url-here)
 
 ## Getting Started
 
