@@ -13,7 +13,7 @@ A modern web application that helps users discover movies and get personalized r
 
 ## Live Demo
 
-[View Live Demo](https://candid-puffpuff-095bc9.netlify.app/)
+[View Live Demo](https://zippy-arithmetic-1a56b3.netlify.app/)
 
 ## Technologies Used
 
