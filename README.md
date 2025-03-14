@@ -35,7 +35,7 @@ A modern web application that helps users discover movies and get personalized r
 1. Clone the repository
 
 ```bash
-git clone [https://github.com/your-username/movie-recommendation.git](https://github.com/iMertt/movie-recommendation.git)
+git clone [https://github.com/iMertt/movie-recommendation.git]
 ```
 
 2. Navigate to the project directory
