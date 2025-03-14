@@ -1,38 +1,624 @@
-.App {
+/* Modern UI Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+.modern {
+  font-family: "Poppins", sans-serif;
+}
+
+.home-container.modern {
+  padding: 0;
+  text-align: left;
+  background-color: #0f0f1a;
+  color: #fff;
+}
+
+.hero-section {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 15, 26, 0.7),
+    rgba(15, 15, 26, 0.9)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-form.modern {
+  margin: 2rem 0;
+}
+
+.search-input-container {
   display: flex;
-  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-input-container:focus-within {
+  box-shadow: 0 4px 30px rgba(175, 66, 97, 0.4);
+  border: 1px solid rgba(175, 66, 97, 0.5);
+}
+
+.modern-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.modern-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modern-btn {
+  background: linear-gradient(45deg, #af4261, #f3ec78);
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(175, 66, 97, 0.3);
+  margin-top: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.modern-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(175, 66, 97, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #af4261, #f3ec78);
+  border-radius: 3px;
+}
+
+.modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.modern-card {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modern-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.modern-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(15, 15, 26, 0.9),
+    rgba(15, 15, 26, 0.3)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modern-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.view-details-btn {
+  background: linear-gradient(45deg, #af4261, #f3ec78);
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.view-details-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.card-year {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.modern-loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: #af4261;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+.modern-error {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #ff6b81;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #ff6b81;
+  margin: 2rem 0;
+}
+
+
+/* Add these styles to your existing App.css */
+
+.modern-navbar {
+  background-color: rgba(15, 15, 26, 0.95);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-brand a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand a:hover {
+  color: #af4261;
+}
+
+.navbar-brand i {
+  color: #af4261;
+}
+
+/* Add padding to the body to account for fixed navbar */
+/* Add these styles to fix the white strip at the bottom */
+html, body, #root, .App {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f1a;
+}
+
+body {
+  padding-top: 70px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Make sure the container extends to full height */
+.container {
+  min-height: calc(100vh - 70px);
+}
+
+/* Adjust hero section to account for navbar */
+.hero-section {
+  margin-top: -70px;
+}
+
+/* Responsive Movie Detail Styles */
+@media screen and (max-width: 768px) {
+  .movie-detail {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .movie-detail-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .movie-detail-header img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .movie-info h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .movie-info p {
+    font-size: 1rem;
+  }
+
+  .movie-actions {
+    justify-content: center;
+  }
+
+  .movie-plot {
+    padding: 1rem;
+  }
+
+  .movie-plot h2 {
+    font-size: 1.5rem;
+  }
+
+  .movie-plot p {
+    font-size: 1rem;
+  }
+
+  .recommendations h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .modern-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .card-image {
+    height: 210px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+/* Additional small screen adjustments */
+@media screen and (max-width: 480px) {
+  .movie-detail {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .movie-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .modern-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
+
+.movie-detail {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1a1a2e;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.movie-detail-header {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.movie-detail-header img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.movie-info p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.movie-info p strong {
+  color: #fff;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.movie-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.movie-actions button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.movie-actions button.btn-primary {
+  background: linear-gradient(45deg, #af4261, #f3ec78);
+  color: #fff;
+}
+
+.movie-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.movie-plot {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #af4261;
+}
+
+.movie-plot h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.movie-plot p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.recommendations {
+  margin-top: 3rem;
+}
+
+.recommendations h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.recommendations h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #af4261, #f3ec78);
+  border-radius: 3px;
+}
+
+.movie-detail .btn {
+  background: linear-gradient(45deg, #af4261, #f3ec78);
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.movie-detail .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Add these styles to fix ResizeObserver issues */
+.movie-detail {
+  contain: content;
+  content-visibility: auto;
+}
+
+.movie-detail-header img {
+  aspect-ratio: 2/3;
+  height: auto;
+  width: 300px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  aspect-ratio: 2/3;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Update the existing media query */
+@media screen and (max-width: 768px) {
+  .movie-detail-header img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 2/3;
+  }
+  
+  .card-image {
+    aspect-ratio: 2/3;
+    height: auto;
+  }
+}
+/* Add at the bottom of your file */
+@media screen and (max-width: 768px) {
+  .movie-detail {
+    overflow: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  .movie-detail-header {
+    height: auto !important;
   }
 }
