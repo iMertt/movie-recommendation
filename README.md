@@ -9,7 +9,7 @@ A modern web application that helps users discover movies and get personalized r
 - 📊 Get movie recommendations based on genres
 - 💫 Modern and responsive UI
 - ⚡ Fast and efficient search
-- 🎯 Genre-based similar movie suggestions
+
 
 ## Live Demo
 
